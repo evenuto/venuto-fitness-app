@@ -13,8 +13,13 @@
         <div id="header-placeholder"></div>
 
         <div class="container">
+            <h1>
+                <script>
+                  var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                  document.write(new Date().toLocaleDateString('en-US', options));
+                  </script>
+            </h1>
             <h3>Hello USERNAME</h3>
-            <h3>display the current DATE</h3>
             <p>Food and workout stats for the day go here</p>
     </div>
 
