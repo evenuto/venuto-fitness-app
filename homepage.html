@@ -7,20 +7,21 @@
   
         <title>Homepage</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
+        <link rel="stylesheet" href="styling.css">
     </head>
     <body>
         <div id="header-placeholder"></div>
 
         <div class="container">
             <h1>
-                <script>
+                <script style="color: white;">
                   var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                  document.write(new Date().toLocaleDateString('en-US', options));
+                  var dateOutput = new Date().toLocaleDateString('en-US', options);
+                  document.write(dateOutput.fontcolor("white"));
                   </script>
             </h1>
-            <h3>Hello USERNAME</h3>
-            <p>Food and workout stats for the day go here</p>
+            <h3 style="color: white;">Hello USERNAME</h3> <!--USERNAME will be a variable received during signup -->
+            <p style="color: white;">Food and workout stats for the day go here</p>
     </div>
 
 
