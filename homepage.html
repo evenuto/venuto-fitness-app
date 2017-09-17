@@ -13,14 +13,26 @@
         <div id="header-placeholder"></div>
 
         <div class="container">
-            <h2>
-                <script style="color: white;">
+            <h2 style="color: white;">
+                <script>
                   var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                   var dateOutput = new Date().toLocaleDateString('en-US', options);
                   document.write(dateOutput.fontcolor("white"));
-                  </script>
+                </script>
             </h2>
-            <h3 style="color: white;">Hello USERNAME</h3> <!--USERNAME will be a variable received during signup -->
+            <h3 id="greeting" style="color: white;">
+                <script>
+                    var d = new Date();
+                    var h = d.getHours();
+                    if(h>=12) {
+                        document.write("Good Afternoon USERNAME!");
+                    }
+                    else {
+                        document.write("Good Morning USERNAME!");
+                    }
+                    //USERNAME will be a variable received during signup 
+                    </script>
+            </h3>
             <p style="color: white;">Food and workout stats for the day go here</p>
     </div>
 
