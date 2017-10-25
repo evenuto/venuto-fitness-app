@@ -7,34 +7,52 @@
   
         <title>Homepage</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="styling.css">
-        <script src="getName.js"></script>
+        <link rel="stylesheet" href="dist/styling.css">
     </head>
     <body>
         <div id="header-placeholder"></div>
 
         <div class="container">
-            <h2 id="todays-date"></h2>
-            <h3 id="greeting"></h3>
-            <p style="color: white;">Food and workout stats for the day go here</p>
-        </div>
+            <div class="jumbotron">
+                <h1 class="display-3" align="center">POWERApp!</h1>
+            </div>
+            
+            <h2 align="center">Do stuff here</h2>
 
-        <script>
-            var options = {weekday:'long', year:'numeric', month:'long', day:'numeric'};
-            var dateOutput = new Date().toLocaleDateString('en-US', options);
-            document.getElementById("todays-date").innerHTML = dateOutput.fontcolor("white");
-        </script>   
-        <script>
-            var d = new Date();
-            var out;
-            if(d.getHours() >= 12) {
-                out = "Good Afternoon " + getName() + "!";
-            }
-            else {
-                out = "Good Morning " + getName() + "!";
-            }
-            document.getElementById("greeting").innerHTML = out.fontcolor("white");
-        </script>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <!--<img class="card-img-top" src="..." alt="Card image cap">-->
+                        <div class="card-body">
+                          <h4 class="card-title">Title</h4>
+                          <p class="card-text"></p>
+                          <a class="btn btn-primary" href="">Do something</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <!--<img class="card-img-top" src="..." alt="Card image cap">-->
+                        <div class="card-body">
+                          <h4 class="card-title">Title</h4>
+                          <p class="card-text"></p>
+                          <a class="btn btn-primary" href="">Do something</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <!--<img class="card-img-top" src="..." alt="Card image cap">-->
+                        <div class="card-body">
+                          <h4 class="card-title">Title</h4>
+                          <p class="card-text"></p>
+                          <a class="btn btn-primary" href="">Do something</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
