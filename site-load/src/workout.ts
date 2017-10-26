@@ -1,11 +1,21 @@
 import * as $ from 'jquery';
 
 export class Choice {
-    text: string;
+    text: string = "Running";
 }
 
+export class WorkoutList {
+    choices: Choice[] = [new Choice(), new Choice()];
 
-export class WorkoutSession {
+    drawChoices(){
+        $("#workout-choices").html(
+            this.choices.map(x=> `<li class="list-group-item">${x.text}</li>`).join("")
+        );
+    }
+
+}
+
+export class Session {
     choices: Choice[] = [];
     
     init() {
@@ -16,17 +26,14 @@ export class WorkoutSession {
         );
     }
 
-    drawChoices(){
-        $("#workout-choices").html(
-            this.choices.map(x=> `<li class="list-group-item">${x.text}</li>`).join("")
-        );
-    }
+    
 }
 
 //Controller
-const session = new WorkoutSession();
+const session = new Session();
+const wL = new WorkoutList();
 session.init().done(()=>{  
-    session.drawChoices();
+    wL.drawChoices();
 
 });
 
