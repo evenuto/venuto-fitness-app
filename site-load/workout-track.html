@@ -7,6 +7,8 @@
         <title>Workout</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="dist/main.bundle.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
     <body>
 
@@ -17,21 +19,28 @@
                 <h3>Edit Workout Here</h3>
             </div>
 
-            <div class="container col-lg-12 block center">
-                <div class="row col-xs-5 center" id="workout-choices">
-                    <div class="form-group">
-                        <label for="workout" style="color: white;">Add a workout routine</label>
-                        <textarea class="form-control" id = "workout" rows="1"></textarea>
+            
+                <div class="container col-lg-12 block center">
+                    <div class="row col-xs-5 center" id="workout-choices">
+                        <div class="form-group">
+                            <label for="workout" style="color: white;">Add a workout routine</label>
+                            <input class="form-control" type= "text" id = "workout">
+                        </div>
+                        <div class="form-group">
+                            <label for "duration" style="color: white;">Duration of workout routine (minutes) </label>
+                            <input class="form-control" type="number" id = "duration">
+                        </div>
+                        <button type="submit" id="submit" class="btn btn-primary" style="float:right;">Add workout</button>
                     </div>
-                    <div class="form-group">
-                        <label for "duration" style="color: white;">Duration of workout routine (minutes) </label>
-                        <input class="number" id = "duration">
+                    <div class = "row col-xs-2 center"></div>
+                    <div class="row col-xs-5 center" id="output">
+                        <div class = "card">
+                            <div class="card-header">Completed workouts:</div>
+                            <div class="card-body" id = "output"></div>
+                        </div>
                     </div>
-                    <button type="submit" name="submit" class="btn btn-primary" style="float:right;">Add workout</button>
                 </div>
-                <div class = "row col-xs-2 center"></div>
-                <div class="row col-xs-5 center" id="output">Completed workouts</div>
-            </div>
+            
         </div>
 
         <script>
@@ -40,6 +49,7 @@
                 currentSection: "workout-track"
             };
         </script>
+        <script src="src/handleWorkouts.js"></script>
        <script src="dist/bundle.js"></script>
        
     </body>
