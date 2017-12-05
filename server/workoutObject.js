@@ -1,8 +1,7 @@
+const choices = require("./choices");
 
-module.exports = {
-    choices: [
-        { text: "Swimming" },
-        { text: "Running" },
-        { text: "Weight Lifting" }
-    ]
+const workout = {
+    choices: choices
 }
+
+module.exports = workout;
